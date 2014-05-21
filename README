@@ -1,0 +1,14 @@
+Dies ist die Quellcode Vorlage fuer ListMergeSort. Die einzelnen Dateien sind
+kommentiert.
+
+Kompilieren der Tests und aller Java-Dateien:
+$ javac -cp <junit-path>/junit-4.jar:. *.java
+also z.B.:
+$ javac -cp /usr/share/junit-4/lib/junit.jar *.java
+
+Ausfueshren der Tests:
+$ java -cp <junit-path>:<hamcrest-path>:. SortTest
+also z.B.:
+$ java -cp /usr/share/junit-4/lib/junit.jar:/usr/share/hamcrest-core-1.3/lib/hamcrest-core.jar:. SortTest
+
+... oder benutzen Sie eclipse.
