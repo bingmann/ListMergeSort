@@ -25,6 +25,11 @@ abstract class OurCompare implements Comparator<Integer>
         return cmp(a, b) == 0;
     }
 
+    /** true if a != b */
+    public boolean unequal(int a, int b) {
+        return cmp(a, b) != 0;
+    }
+
     /** true if a < b */
     public boolean less(int a, int b) {
         return cmp(a, b) < 0;
