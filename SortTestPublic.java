@@ -23,14 +23,14 @@ public class SortTestPublic
     public void test1ComparisonsAscending() {
         SortTestRunner ms = SortTestRunner.runSingle(new ListMergeSort(), n, new FillAscending(), new CompareA());
         assertTrue(ms.getSorted());
-        assertTrue(ms.getComparisons() <= 4 * n * 1.10);
+        assertTrue(ms.getComparisons() <= 2 * n * 1.10);
     }
 
     @Test
     public void test2ComparisonsDescending() {
         SortTestRunner ms = SortTestRunner.runSingle(new ListMergeSort(), n, new FillDescending(), new CompareA());
         assertTrue(ms.getSorted());
-        assertTrue(ms.getComparisons() <= 4 * n * 1.10);
+        assertTrue(ms.getComparisons() <= 2 * n * 1.10);
     }
 
     @Test
