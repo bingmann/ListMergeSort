@@ -74,8 +74,10 @@ class SortTestRunner
         }
         else {
             System.out.println("checking order: FAILED!");
-            System.out.println("input: " + Arrays.toString(constArray));
-            System.out.println("output: " + Arrays.toString(array));
+            if (array.length <= 1024) {
+                System.out.println("input: " + Arrays.toString(constArray));
+                System.out.println("output: " + Arrays.toString(array));
+            }
         }
 
         mComparisons = cmp.get();
