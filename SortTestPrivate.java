@@ -109,21 +109,21 @@ public class SortTestPrivate
     final int n = 2 * 1024 * 1024;
     final double logn = Math.log(n) / Math.log(2);
 
-    @Test
+    @Test(timeout = 60000)
     public void test1ComparisonsAscending() {
         SortTestRunner ms = SortTestRunner.runSingle(new ListMergeSort(), n, new FillAscendingOrder(cmp), cmp);
         assertTrue(ms.getSorted());
         assertTrue(ms.getComparisons() <= 2 * n * 1.10);
     }
 
-    @Test
+    @Test(timeout = 60000)
     public void test2ComparisonsDescending() {
         SortTestRunner ms = SortTestRunner.runSingle(new ListMergeSort(), n, new FillDescendingOrder(cmp), cmp);
         assertTrue(ms.getSorted());
         assertTrue(ms.getComparisons() <= 2 * n * 1.10);
     }
 
-    @Test(timeout = 10000)
+    @Test(timeout = 60000)
     public void test3ComparisonsSawtooth() {
         SortTestRunner ms = SortTestRunner.runSingle(new ListMergeSort(), n, new FillSawtooth(), new CompareA());
         assertTrue(ms.getSorted());
